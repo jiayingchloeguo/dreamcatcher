@@ -41,7 +41,8 @@
     if(user){document.querySelector("#signedInEmail").textContent=user.email||"已登录";if(lastUser!==user.id){lastUser=user.id;await syncNow()}}
     else lastUser=null;
   }
-  document.querySelector("#accountBtn").onclick=()=>dialog.showModal();
+  window.addEventListener("dreamcatcher:openaccount",()=>dialog.showModal());
+  window.addEventListener("dreamcatcher:profile",()=>{const el=document.querySelector("#profileStatus");if(el)el.textContent=user?("已登录 · "+(user.email||"账户")):"未登录 · 点击账户与云同步"});
   document.querySelector("#closeAccountBtn").onclick=()=>dialog.close();
   if(!configured)return;
   client=window.supabase.createClient(cfg.url,cfg.publishableKey);window.dreamcatcherSupabase=client;
