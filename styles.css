@@ -219,3 +219,15 @@
   outline:0!important;
   box-shadow:none!important;
 }
+
+/* Dream detail: title bar is the absolute top edge of the scroll viewport */
+#viewDreamDialog .dream-view-panel{
+  padding-top:0!important;
+}
+#viewDreamDialog .dream-view-panel>.dialog-head{
+  top:0!important;
+  margin:0 -18px 16px!important;
+  padding:18px 18px 14px!important;
+  background:var(--paper)!important;
+  isolation:isolate;
+}
