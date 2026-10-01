@@ -101,3 +101,20 @@
   #dreamDialog .choice-chip{padding:7px 11px;font-size:11px}
   #dreamDialog .form-actions{margin-top:18px;padding-bottom:4px}
 }
+
+/* iOS editor: keep centered and prevent Safari focus zoom */
+@media (max-width:520px){
+  #dreamDialog{
+    width:calc(100% - 28px);
+    max-width:none;
+    height:min(88dvh,760px);
+    max-height:88dvh;
+    margin:auto;
+    border-radius:24px;
+  }
+  #dreamDialog input,
+  #dreamDialog textarea,
+  #dreamDialog select{
+    font-size:16px !important;
+  }
+}
