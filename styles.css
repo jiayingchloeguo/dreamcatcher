@@ -59,3 +59,45 @@
 }
 
 #noticeDialog{width:calc(100% - 44px);max-width:390px;border-radius:24px;margin:auto}.notice-panel{background:linear-gradient(180deg,#fffdfa,#faf7ff)}.notice-panel #noticeOk{width:100%;margin-top:2px}.notice-panel .confirm-icon{background:linear-gradient(145deg,#eee9ff,#ded8ff)}
+
+/* Dream editor — compact bottom sheet on phones */
+@media (max-width:520px){
+  #dreamDialog{
+    width:100%;
+    max-width:none;
+    height:min(86dvh,760px);
+    max-height:86dvh;
+    margin:auto auto 0;
+    border-radius:28px 28px 0 0;
+  }
+  #dreamForm{
+    height:100%;
+    padding:0 20px calc(24px + env(safe-area-inset-bottom));
+    overflow-y:auto;
+  }
+  #dreamDialog .dialog-head{
+    position:sticky;
+    top:0;
+    z-index:4;
+    margin:0 -20px 8px;
+    padding:18px 20px 12px;
+    background:rgba(251,248,242,.96);
+    backdrop-filter:blur(12px);
+  }
+  #dreamDialog .dialog-head h2{font-size:22px}
+  #dreamDialog label{margin:12px 0;gap:6px;font-size:12px}
+  #dreamDialog input,
+  #dreamDialog textarea{
+    width:100%;
+    box-sizing:border-box;
+    border-radius:14px;
+    padding:11px 12px;
+    font-size:14px;
+  }
+  #dreamDialog textarea{min-height:118px;height:118px;resize:none}
+  #dreamDialog fieldset{margin:16px 0}
+  #dreamDialog legend{margin-bottom:9px;font-size:12px}
+  #dreamDialog .chip-grid{gap:7px}
+  #dreamDialog .choice-chip{padding:7px 11px;font-size:11px}
+  #dreamDialog .form-actions{margin-top:18px;padding-bottom:4px}
+}
