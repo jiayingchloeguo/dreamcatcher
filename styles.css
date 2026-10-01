@@ -136,3 +136,31 @@
     margin:0;
   }
 }
+
+/* iOS date input sizing: WebKit needs an explicit content width */
+@media (max-width:520px){
+  #dreamDialog label{min-width:0;max-width:100%}
+  #dreamDialog #dreamDate{
+    -webkit-appearance:none;
+    appearance:none;
+    display:block;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+    height:50px;
+    min-height:50px;
+    padding:0 14px!important;
+    margin:0;
+    overflow:hidden;
+    text-align:left!important;
+  }
+  #dreamDialog #dreamDate::-webkit-date-and-time-value{
+    display:block;
+    width:100%;
+    min-width:0;
+    margin:0;
+    padding:0;
+    text-align:left!important;
+  }
+}
