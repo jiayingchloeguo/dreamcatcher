@@ -11,3 +11,5 @@
 #confirmDialog .confirm-panel{background:linear-gradient(180deg,#fffdfa,#faf7ff)}#confirmDialog .confirm-actions .secondary-btn{background:#f7f4ff}#confirmDialog .confirm-danger{background:#9a5966;color:#fff}#confirmDialog .confirm-danger:disabled{opacity:.55}
 
 .nickname-edit-icon{width:auto;height:auto;padding:2px 4px;display:inline-grid;place-items:center;border:0;background:transparent;color:#756bd7}.nickname-edit-icon span{display:block;font-size:14px;line-height:1;transform:scaleX(-1)}
+
+.swipe-row{position:relative;overflow:hidden;border-radius:18px}.swipe-row .dream-card{position:relative;z-index:2;transition:transform .2s ease;touch-action:pan-y}.swipe-actions{position:absolute;z-index:1;inset:0 0 0 auto;display:flex;justify-content:flex-end;width:150px;border-radius:18px;overflow:hidden}.swipe-actions button{border:0;color:#fff;font-weight:700;font-size:12px}.swipe-edit{width:76px;background:#8176dc}.swipe-delete{width:74px;background:#a65f6d}.swipe-row:not(.delete-reveal) .swipe-delete{opacity:.92}.detail-actions{gap:9px}.detail-actions .danger-btn{flex:0 0 34%;background:#f6e9ec;color:#985462}.detail-actions .primary-btn{flex:1;width:auto}
