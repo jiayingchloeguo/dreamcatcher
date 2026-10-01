@@ -164,3 +164,6 @@
     text-align:left!important;
   }
 }
+
+/* Short text fields: nickname and custom labels */
+#textEntryDialog[data-entry-mode="short"] #textEntryValue{min-height:0!important;height:52px!important;max-height:52px!important;resize:none!important;padding:14px 16px!important;line-height:22px!important}
