@@ -5,8 +5,8 @@
   const show=(id,on)=>document.querySelector(id)?.classList.toggle("hidden",!on);
   const msg=(t,b=false)=>{const e=document.querySelector("#authMessage");if(e){e.textContent=t||"";e.classList.toggle("error",b)}};
   const state=()=>window.dreamcatcherState;
-  const toRow=d=>({id:d.id,user_id:user.id,dream_date:d.date,title:d.title||"",content:d.content||"",category:d.category||null,moods:Array.isArray(d.mood)?d.mood:(d.mood?[d.mood]:[]),body_sensations:d.body||[],life_context:d.context||"",created_at:d.createdAt?new Date(d.createdAt).toISOString():new Date().toISOString(),updated_at:d.updatedAt?new Date(d.updatedAt).toISOString():new Date().toISOString()});
-  const fromRow=r=>({id:r.id,date:r.dream_date,title:r.title||"",content:r.content||"",category:r.category||"",mood:r.moods||[],body:r.body_sensations||[],context:r.life_context||"",createdAt:new Date(r.created_at).getTime(),updatedAt:new Date(r.updated_at).getTime()});
+  const toRow=d=>({id:d.id,user_id:user.id,dream_date:d.date,title:d.title||"",content:d.content||"",category:d.category||null,moods:Array.isArray(d.mood)?d.mood:(d.mood?[d.mood]:[]),body_sensations:d.body||[],life_context:d.context||"",analysis:d.analysis||null,analysis_generated_at:d.analysisGeneratedAt||null,created_at:d.createdAt?new Date(d.createdAt).toISOString():new Date().toISOString(),updated_at:d.updatedAt?new Date(d.updatedAt).toISOString():new Date().toISOString()});
+  const fromRow=r=>({id:r.id,date:r.dream_date,title:r.title||"",content:r.content||"",category:r.category||"",mood:r.moods||[],body:r.body_sensations||[],context:r.life_context||"",analysis:r.analysis||"",analysisGeneratedAt:r.analysis_generated_at||null,createdAt:new Date(r.created_at).getTime(),updatedAt:new Date(r.updated_at).getTime()});
   async function pushAll(){
     if(!user||syncing||!state())return; syncing=true;
     try{
