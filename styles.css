@@ -2,3 +2,5 @@
 .ai-analysis-text{margin-top:10px}.ai-analysis-text h4{margin:16px 0 7px;font-size:14px;color:var(--ink);line-height:1.45}.ai-analysis-text h4:first-child{margin-top:6px}.ai-analysis-text p{margin:0 0 10px;white-space:normal;font-size:13px;line-height:1.75}.ai-analysis-text strong{font-weight:700}
 
 .calendar-filter{display:flex;align-items:end;gap:8px;margin:0 0 12px}.calendar-filter label{flex:1;margin:0;gap:6px}.calendar-filter select{width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:13px;padding:11px 12px;font:inherit}.calendar-filter button{border:0;background:transparent;color:#6d63d7;padding:11px 5px;font-size:12px;font-weight:700}
+
+.custom-chip-wrap{display:inline-flex;align-items:center;position:relative}.custom-chip-wrap .choice-chip{padding-right:28px}.delete-chip{position:absolute;right:5px;top:50%;transform:translateY(-50%);width:20px;height:20px;padding:0;border:0;border-radius:50%;background:transparent;color:#8a849b;font-size:15px;line-height:20px}.custom-chip-wrap .choice-chip.selected+.delete-chip{color:#fff}
