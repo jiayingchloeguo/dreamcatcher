@@ -57,3 +57,5 @@
     font-size:12px;
   }
 }
+
+#noticeDialog{width:calc(100% - 44px);max-width:390px;border-radius:24px;margin:auto}.notice-panel{background:linear-gradient(180deg,#fffdfa,#faf7ff)}.notice-panel #noticeOk{width:100%;margin-top:2px}.notice-panel .confirm-icon{background:linear-gradient(145deg,#eee9ff,#ded8ff)}
