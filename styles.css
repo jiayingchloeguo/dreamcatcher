@@ -231,3 +231,12 @@
   background:var(--paper)!important;
   isolation:isolate;
 }
+
+/* Old dreams search */
+.old-dream-search{display:grid;gap:9px;margin:0 0 12px}
+.old-dream-search .calendar-filter{margin:0}
+.keyword-search{height:46px;display:flex;align-items:center;gap:8px;padding:0 11px 0 13px;border:1px solid var(--line);border-radius:15px;background:#fff;box-shadow:0 3px 12px rgba(34,30,70,.025)}
+.keyword-search>span{font-size:19px;color:#8176dc;line-height:1}
+.keyword-search input{flex:1;min-width:0;height:100%;padding:0;border:0!important;outline:0!important;background:transparent!important;box-shadow:none!important;color:var(--ink);font:inherit;font-size:14px}
+.keyword-search input::-webkit-search-cancel-button{-webkit-appearance:none}
+.keyword-search button{width:28px;height:28px;padding:0;border:0;background:transparent;color:#8a849b;font-size:18px;line-height:28px}
