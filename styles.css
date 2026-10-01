@@ -167,3 +167,15 @@
 
 /* Short text fields: nickname and custom labels */
 #textEntryDialog[data-entry-mode="short"] #textEntryValue{min-height:0!important;height:52px!important;max-height:52px!important;resize:none!important;padding:14px 16px!important;line-height:22px!important}
+
+/* Keep dream-detail close control reachable while scrolling */
+#viewDreamDialog .dream-view-panel>.dialog-head{
+  position:sticky!important;
+  top:0;
+  z-index:8;
+  margin:-22px -18px 10px!important;
+  padding:18px 18px 12px!important;
+  background:rgba(251,248,242,.94)!important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
