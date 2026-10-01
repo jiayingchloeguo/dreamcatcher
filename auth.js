@@ -1,6 +1,6 @@
 (() => {
   const cfg=window.DREAMCATCHER_SUPABASE||{}, dialog=document.querySelector("#accountDialog");
-  const configured=Boolean(cfg.url&&cfg.publishableKey&&window.supabase);
+  const configured=Boolean(cfg.url&&cfg.publishableKey&&window.supabase?.createClient);
   let client=null,user=null,syncTimer=null,syncing=false,lastUser=null,profile={nickname:""},wormholes=[];
   const show=(id,on)=>document.querySelector(id)?.classList.toggle("hidden",!on);
   const msg=(t,b=false)=>{const e=document.querySelector("#authMessage");if(e){e.textContent=t||"";e.classList.toggle("error",b)}};
