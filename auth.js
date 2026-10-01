@@ -46,7 +46,7 @@
     else lastUser=null;
   }
   window.addEventListener("dreamcatcher:openaccount",()=>dialog.showModal());
-  window.addEventListener("dreamcatcher:comment",()=>alert("Comment 按钮已经接到梦境详情页。下一步需要增加评论数据表后，就可以真正给对方留言。"));
+  window.addEventListener("dreamcatcher:comment",async e=>{if(!user)return dialog.showModal();const dreamId=e.detail?.dreamId,d=state().getSharedDreams().find(x=>x.id===dreamId);if(!d)return;const body=prompt("写下给 "+(d.ownerName||"TA")+" 的评论：");if(body===null)return;const clean=body.trim();if(!clean)return;if(clean.length>1000)return alert("评论最多 1000 个字符");const {error}=await client.rpc("add_wormhole_comment",{target_wormhole:d.wormholeId,target_dream:d.id,comment_body:clean});if(error)return alert("评论发送失败："+error.message);alert("评论已发送 ✦")});
   window.addEventListener("dreamcatcher:profile",async()=>{if(user)await loadProfile();const el=document.querySelector("#profileStatus"),name=document.querySelector("#profileNickname");if(el)el.textContent=user?(user.email||"已登录"):"未登录 · 点击账户与云同步";if(name)name.textContent=profile.nickname||"Dreamcatcher"});
   window.addEventListener("dreamcatcher:editnickname",async()=>{if(!user)return dialog.showModal();const n=prompt("你的昵称：",profile.nickname||"");if(n===null)return;const clean=n.trim();if(!clean||clean.length>30)return alert("昵称需要 1–30 个字符");const {error}=await client.rpc("set_my_nickname",{new_nickname:clean});if(error)return alert("保存失败："+error.message);profile.nickname=clean;document.querySelector("#profileNickname").textContent=clean});
   window.addEventListener("dreamcatcher:openwormhole",async()=>{if(!user)return dialog.showModal();await renderWormhole();document.querySelector("#wormholeDialog").showModal()});
