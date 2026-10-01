@@ -10,4 +10,4 @@
 
 #confirmDialog .confirm-panel{background:linear-gradient(180deg,#fffdfa,#faf7ff)}#confirmDialog .confirm-actions .secondary-btn{background:#f7f4ff}#confirmDialog .confirm-danger{background:#9a5966;color:#fff}#confirmDialog .confirm-danger:disabled{opacity:.55}
 
-.nickname-edit-icon{width:22px;height:22px;padding:0;display:inline-grid;place-items:center;border-radius:50%;background:#f2efff;color:#6f65d5}.nickname-edit-icon span{display:block;font-size:12px;line-height:1;transform:rotate(-22deg)}
+.nickname-edit-icon{width:auto;height:auto;padding:2px 4px;display:inline-grid;place-items:center;border:0;background:transparent;color:#756bd7}.nickname-edit-icon span{display:block;font-size:14px;line-height:1;transform:scaleX(-1)}
