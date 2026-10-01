@@ -195,3 +195,27 @@
 }
 #viewDreamDialog .dream-view-panel>.dialog-head .eyebrow{margin-bottom:5px}
 #viewDreamDialog .dream-view-panel>.dialog-head .icon-btn{background:var(--paper)}
+
+/* Solid sticky dream-detail title bar + plain close icons */
+#viewDreamDialog .dream-view-panel>.dialog-head{
+  background:var(--paper)!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  border-bottom:1px solid var(--line);
+}
+.icon-btn.ghost,
+.dialog-head .icon-btn,
+#viewDreamDialog .icon-btn{
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+  border-radius:0!important;
+}
+.icon-btn.ghost:focus,
+.icon-btn.ghost:focus-visible,
+.dialog-head .icon-btn:focus,
+.dialog-head .icon-btn:focus-visible{
+  outline:0!important;
+  box-shadow:none!important;
+}
